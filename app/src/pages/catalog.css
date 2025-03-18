@@ -7,3 +7,11 @@
     text-align: center;
     color: green;
 }
+
+.catalog .filters{
+    margin-bottom: 12px;
+}
+
+.catalog .filters button{
+    margin-left: 5px;
+}
