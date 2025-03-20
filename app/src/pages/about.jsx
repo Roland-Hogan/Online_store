@@ -12,7 +12,7 @@ function About() {
     return (
         <div className="about">
             <h2>Roland Hogan</h2>
-            { isVisible ? <h5>RolandHHogan@gmail.com</h5> : null }
+            { isVisible ? <h5>RolandHHogan@gmail.com</h5> : <label className='d-block'>Click the button to see email</label> }
 
             <button className='btn btn-dark' onClick={showData}>See email</button>
         </div>

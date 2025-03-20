@@ -1,0 +1,14 @@
+.prod-admin {
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.prod-admin .form-field {
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.prod-admin .form-field label {
+    display: block;
+}

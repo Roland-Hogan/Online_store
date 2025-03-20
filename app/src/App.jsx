@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Catalog from './pages/catalog'
 import About from './pages/about'
+import Admin from './pages/Admin'
 
 // load bootstrap and icons
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -19,6 +20,8 @@ function App() {
      <Catalog></Catalog>
 
      <About></About>
+
+     <Admin></Admin>
 
       <Footer></Footer>
     </>

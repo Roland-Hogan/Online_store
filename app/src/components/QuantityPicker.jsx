@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "./QuantityPicker.css";
 
-function QuantityPicker(){
+function QuantityPicker(props){
     const [ quantity, setQuantity] = useState(1);
 
     function increase(){
         let val = quantity + 1;
         setQuantity(val);
+        props.onChange(val);
     }
     
     function decrease() {
@@ -14,6 +15,7 @@ function QuantityPicker(){
         
         let val = quantity - 1;
         setQuantity(val);
+        props.onChange(val);
     }
         
     return(

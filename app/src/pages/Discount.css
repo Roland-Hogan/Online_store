@@ -1,0 +1,15 @@
+.discounts {
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 10px;
+    max-width: 400px;
+}
+
+.discounts .form-field{
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.discounts .form-field label {
+    display: block;
+}

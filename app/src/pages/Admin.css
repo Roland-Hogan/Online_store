@@ -1,0 +1,11 @@
+ .admin {
+  padding-top: 3rem;
+ }
+
+ .admin .parent {
+  display: flex;
+ }
+
+ .admin .parent section {
+  flex: 1;
+ }
