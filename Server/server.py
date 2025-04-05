@@ -47,6 +47,28 @@ def post_products():
     print(product)
     return "product saved"
 
+
+@app.get("/api/categories")
+def get_categories():
+    # return list of unique categories
+    results = []
+    cursor = db.products.find({})
+    for prod in cursor:
+        cat = prod["category"]
+        if cat not in results:
+            results.append(cat)
+
+    return json.dumps(results)
+
+@app.get("/api/reports/total")
+def get_total_sum():
+    cursor = db.products.find({})
+    total = 0
+    for prod in cursor:
+        total += prod["price"]
+
+    return json.dumps(total)
+
 @app.put("/api/products/<int:index>")
 def put_products(index):
     updatedProduct = request.get_json()
