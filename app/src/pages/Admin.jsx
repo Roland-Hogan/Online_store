@@ -5,7 +5,7 @@ import ProductAdmin from "./ProductAdmin"
 
 function Admin() {
   return (
-    <div className="admin">
+    <div className="admin page">
       <h1>Admin Dashboard</h1>
       
         <div className="parent">

@@ -1,9 +1,15 @@
 .about{
-    min-height: 250px;
     background-color: white;
 }
 
 .about h2{
     text-align: center;
     color: gold;
+}
+
+.about .pic {
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    margin-bottom: 15px;
 }

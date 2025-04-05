@@ -78,7 +78,7 @@ const mockCategories = ["Fruit", "Meat", "Starch", "Dairy", "Pantry"]
 
 function Catalog(){
     return (
-        <div className="catalog">
+        <div className="catalog page">
             <h1>Check Out our catalog</h1>
 
             <div className="filters">

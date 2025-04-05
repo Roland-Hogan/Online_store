@@ -10,7 +10,11 @@ function About() {
         
     }
     return (
-        <div className="about">
+        <div className="about page">
+
+            {/* image from public */}
+            <img className="pic"  src="/images/grocery.jpg" alt=""></img>
+
             <h2>Roland Hogan</h2>
             { isVisible ? <h5>RolandHHogan@gmail.com</h5> : <label className='d-block'>Click the button to see email</label> }
 

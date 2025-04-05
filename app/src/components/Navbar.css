@@ -1,6 +1,7 @@
 .navbar {
     display: flex;
     align-items: center;
+    padding-left: 15px !important;
 }
 
 .navbar ul {
@@ -8,6 +9,7 @@
     list-style: none;
     margin-bottom: 0;
     flex: 1;
+    align-items: center;
 }
 
 .navbar ul li  {
@@ -15,7 +17,12 @@
     margin:0 10px;
 }
 
-.navbar ul li:hover {
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar ul li a:hover {
     color:blue;
     font-weight: 600;
     cursor: pointer;
@@ -24,3 +31,18 @@
     font-size: 20px;
     font-weight: bold;
 }
+.navbar .cart-container {
+    margin-left: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .cart-container i {
+    margin-right: 5px;
+}
+
+.navbar .cart-container button {
+    margin-left: 12px;
+}
+
