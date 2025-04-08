@@ -46,7 +46,7 @@ function Discount(){
                 <input className='form-control' type="number" onBlur={handleCoupon} name="discount"/>
             </div>
 
-            <button className='btn btn-sm btn-dark' onClick={save}Save></button>
+            <button className='btn btn-sm btn-dark' onClick={save}Save>Discount</button>
 
             <ul className='coupon-list'>
                 {allCoupons.map( cp => <li>{cp.code} - {cp.discount}%</li>)}

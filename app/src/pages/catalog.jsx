@@ -1,5 +1,7 @@
+import { useEffect, useState } from "react";
 import "./Catalog.css";
 import Product from "./product";
+import DataService from "../services/DataService";
 
 const mockData = [
     {
@@ -77,19 +79,38 @@ const mockData = [
 const mockCategories = ["Fruit", "Meat", "Starch", "Dairy", "Pantry"]
 
 function Catalog(){
+    const [products, setProducts] = useState([]);
+    const [categories, setCategories] = useState([]);
+
+    async function loadProducts(){
+        let prods = await DataService.getProducts();
+        setProducts(prods);
+    }
+
+    async function loadCategories(){
+        let cats = await DataService.getCategories();
+        setCategories(cats);
+    }
+
+    useEffect(function() {
+        // this will be called when the page loads
+        loadProducts();
+        loadCategories();
+    }, []);
+
     return (
         <div className="catalog page">
             <h1>Check Out our catalog</h1>
 
             <div className="filters">
 
-                {mockCategories.map( cat => <button className= 'btn  btn-outline-info'>{cat}</button>)}
+                {categories.map( cat => <button className= 'btn  btn-outline-info'>{cat}</button>)}
 
             </div>
 
             <div className="list">
 
-                {mockData.map( prod => <Product key={prod. _id} data={prod}></Product>)}
+                {products.map( prod => <Product key={prod._id} data={prod}></Product>)}
 
             </div>
         </div>
